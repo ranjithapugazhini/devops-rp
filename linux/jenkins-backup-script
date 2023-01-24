@@ -23,8 +23,8 @@ ARCHIVED_FILES = [
   "jenkins-backup/secrets/",
   "jenkins-backup/secrets/master.key",
   "jenkins-backup/users/",
-  "jenkins-backup/users/sue445/",
-  "jenkins-backup/users/sue445/config.xml",
+  "jenkins-backup/users/ranjithapugazhini/",
+  "jenkins-backup/users/ranjithapugazhini/config.xml",
 ]
 
 describe tar_file("/tmp/relative_archive.tar.gz") do
