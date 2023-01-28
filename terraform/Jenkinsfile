@@ -29,8 +29,7 @@ pipeline
                          usernamePassword(credentials :'server_credentials', usernameVariable: USER, passwordVariable: PWD )
                     ]}
                     {
-                    sh "username: $(USER)"
-                         "password: $(PWD)"
+                         sh "some script ${USER} ${PWD}"
                     }
                 }
             }
