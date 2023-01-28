@@ -1,6 +1,9 @@
 pipeline
 {
      agent any
+     environment{
+          SERVER_CREDENTIALS =credentials('server_credentials')
+     }
     stages{
     
             stage('build')
@@ -22,6 +25,13 @@ pipeline
             steps
                {
                echo 'this is deploy step' 
+                    withCredentials{[
+                         usernamePassword(credentials :'server_credentials' usernameVariable: USER, passwordVariable: PWD )
+                    ]}
+                    {
+                    sh "username: $(USER)"
+                         "password: $(PWD)"
+                    }
                 }
             }
           }
