@@ -26,7 +26,7 @@ pipeline
                {
                echo 'this is deploy step' 
                     withCredentials{[
-                         usernamePassword(credentials :'server_credentials' usernameVariable: USER, passwordVariable: PWD )
+                         usernamePassword(credentials :'server_credentials', usernameVariable: USER, passwordVariable: PWD )
                     ]}
                     {
                     sh "username: $(USER)"
